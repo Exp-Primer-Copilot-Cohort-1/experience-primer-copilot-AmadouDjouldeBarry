@@ -1,10 +1,8 @@
-// create a web sever
-// 1. load the http module
-var http = require('http');
+// Create web server
 
-// 2. create a server
-http.createServer(function (req, res) {
-  // 3. set the response
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello, world!\n');
-}).listen(8124, "");
+var http = require('http');
+var fs = require('fs');
+var url = require('url');
+var qs = require('querystring');
+var path = require('path');
+var comments = require('./comments.json');
